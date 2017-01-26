@@ -19,13 +19,6 @@ public class T448_Find_All_Numbers_Disappeared_in_an_Array {
         		nums[i-1]=-1;
         		
         		int save_new;
-        		/*while(true){
-        			if(nums[save-1]!=save){
-        				save_new=nums[save-1];
-        				nums[save-1]=save;
-        				save=save_new;
-        			}else break;
-        		}*/
         		while(nums[save-1]!=save){
     				save_new=nums[save-1];
     				nums[save-1]=save;
@@ -33,38 +26,20 @@ public class T448_Find_All_Numbers_Disappeared_in_an_Array {
     				if(save==-1)
     					break;
         			
-        		}
-        		
+        		}	
         	}
-        	
-        	
+
         }
         for(int i=1;i<=nums.length;i++){
-        	if(nums[i-1]!=i){
+        	if(nums[i-1]!=i)
         		List.add(i);
-        	}
         }
         return List;
-        
     }
 	
 	
 	
-	//other solution
-public List<Integer> findDisappearedNumbers2(int[] nums) {
-		
-		List<Integer> List=new LinkedList<Integer>();
-		for(int i=0;i<nums.length;i++){
-			int idx = Math.abs(nums[i]-1);
-			nums[idx] = -1*Math.abs(nums[idx]-1);
-		}
-		for(int i=0;i<nums.length;i++){
-			if(nums[i]<0)
-				List.add(nums[i]);
-		}
-        return List;
-        
-    }
+	
 	
 	
 	
