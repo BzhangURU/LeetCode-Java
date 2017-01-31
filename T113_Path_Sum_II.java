@@ -22,11 +22,8 @@ public class Solution {
         if(root.left==null&&root.right==null)
         	if(root.val==sum){
         		List.add(root.val);
-        		List<Integer> List_output =new LinkedList<Integer>();
-        		for(int i=0;i<List.size();i++)
-        			List_output.add(List.get(i));
+        		LofL.add(new LinkedList<Integer>(List));
         		List.remove(List.size()-1);
-        		LofL.add(List_output);
         	}
         	else return;
         else if(root.left==null){
