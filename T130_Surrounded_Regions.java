@@ -1,4 +1,5 @@
 public class Solution {
+	//every O that is not captured must touch border directly or indirectly
     public void solve(char[][] board) {
 		if(board.length==0)
 			return;
