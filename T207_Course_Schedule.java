@@ -49,14 +49,12 @@ public class Solution {
 							end2begin.remove(endnode);
 							start_nodes.offer(endnode);
 						}
-						
 					}
 					begin2end.remove(node);
 				}
 				
 				
 			}else{
-				System.out.println("error1");
 				return false;
 			}
 			
