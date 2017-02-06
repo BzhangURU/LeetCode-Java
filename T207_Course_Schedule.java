@@ -4,23 +4,23 @@ public class Solution {
 		HashMap<Integer,HashSet<Integer>> end2begin=new HashMap<Integer,HashSet<Integer>>();
 		
 		for(int i=0;i<prerequisites.length;i++){
-			if(prerequisites[i][0]==prerequisites[i][1])
+			if(prerequisites[i][1]==prerequisites[i][0])
 				return false;
 			
-			if(begin2end.containsKey(prerequisites[i][0])){
-				begin2end.get(prerequisites[i][0]).add(prerequisites[i][1]);
-			}else{
-				HashSet<Integer> set=new HashSet<Integer>();
-				set.add(prerequisites[i][1]);
-				begin2end.put(prerequisites[i][0], set);
-			}
-			
-			if(end2begin.containsKey(prerequisites[i][1])){
-				end2begin.get(prerequisites[i][1]).add(prerequisites[i][0]);
+			if(begin2end.containsKey(prerequisites[i][1])){
+				begin2end.get(prerequisites[i][1]).add(prerequisites[i][0]);
 			}else{
 				HashSet<Integer> set=new HashSet<Integer>();
 				set.add(prerequisites[i][0]);
-				end2begin.put(prerequisites[i][1], set);
+				begin2end.put(prerequisites[i][1], set);
+			}
+			
+			if(end2begin.containsKey(prerequisites[i][0])){
+				end2begin.get(prerequisites[i][0]).add(prerequisites[i][1]);
+			}else{
+				HashSet<Integer> set=new HashSet<Integer>();
+				set.add(prerequisites[i][1]);
+				end2begin.put(prerequisites[i][0], set);
 			}
 		}
 		
@@ -55,6 +55,7 @@ public class Solution {
 				
 				
 			}else{
+				System.out.println("error1");
 				return false;
 			}
 			
