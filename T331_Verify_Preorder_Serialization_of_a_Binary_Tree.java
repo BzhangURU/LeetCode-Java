@@ -1,3 +1,9 @@
+//my idea: 9,3,4,#,#,1,#,#,2,#,(6,#,#)
+//my idea: 9,3,4,#,#,1,#,#,(2,#,#)
+//my idea: 9,3,4,#,#,(1,#,#),#
+//my idea: 9,3,(4,#,#),#,#
+//my idea: 9,(3,#,#),#
+//my idea: 9,#,#
 public class Solution {
     public boolean isValidSerialization(String preorder) {
         if(preorder.length()==0)
