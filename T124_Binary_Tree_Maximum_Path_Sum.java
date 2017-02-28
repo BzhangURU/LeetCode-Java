@@ -40,8 +40,6 @@ public class Solution {
 			}else{
 				int value_l=traverse_build_map(node.left,max);
 				int value_r=traverse_build_map(node.right,max);
-				/*int value_path=node.val+Math.max(0, node_max.get(node.left))+
-						Math.max(0,node_max.get(node.right));*/
 				int value_path=node.val+Math.max(0,value_l)+Math.max(0,value_r);
 				int value=node.val+Math.max(0,Math.max(value_l,value_r));
 				if(value_path>max[0])
